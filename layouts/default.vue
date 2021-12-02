@@ -17,83 +17,13 @@
           exact
         >
           <v-list-item-action>
+            <v-list-item-title v-text="item.text" />
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
             <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
-
-            <v-divider></v-divider>
-
-        
-        <v-list-item
-          v-for="(item1, i) in items1"
-          :key="i"
-          :to="item1.to"
-          router
-          exact
-        >
-            <v-list-item-action>
-            <v-icon>{{ item1.icon1 }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item1.title1" />
-          </v-list-item-content>
-          </v-list-item>
-
-         <v-divider></v-divider>
-
-        <v-list-item
-          v-for="(item2, i) in items2"
-          :key="i"
-          :to="item2.to"
-          router
-          exact
-        >
-         <v-list-item-action>
-            <v-list-item-title v-text="item2.text" />
-            <v-icon>{{ item2.icon2 }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item2.title2" />
-          </v-list-item-content>
-          </v-list-item>
-
-         <v-divider></v-divider>
-
-        <v-list-item
-          v-for="(item3, i) in items3"
-          :key="i"
-          :to="item3.to"
-          router
-          exact
-        >
-         <v-list-item-action>
-           <v-list-item-title v-text="item3.text3" />
-            <v-icon>{{ item3.icon3 }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item3.title3" />
-          </v-list-item-content>
-          </v-list-item>
-
-         <v-divider></v-divider>
-
-        <v-list-item
-          v-for="(item4, i) in items4"
-          :key="i"
-          :to="item4.to"
-          router
-          exact
-        >
-         <v-list-item-action>
-            <v-icon>{{ item4.icon4 }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item4.title4" />
-          </v-list-item-content>
-          </v-list-item>
 </v-list>
     </v-navigation-drawer>
     <v-app-bar
@@ -203,29 +133,25 @@ export default {
       items: [
         { icon: 'mdi-home', title: 'Home', to: '/' },
         { icon: 'mdi-compass-outline', title: 'Explore',  to: '/#' },
-        { icon: 'mdi-youtube-subscription', title: 'Subscriptions', to: '/##' },
-        ],
-        items1: [
-        { icon1: 'mdi-play-box-multiple', title1: 'Library', to: '/###' },
-        { icon1: 'mdi-history', title1: 'History', to: '/####' },
-        ],
-        items2: [
+        { icon: 'mdi-youtube-subscription', title: 'Subscriptions', to: '/#1' },
+        <divider></divider>,
+        { icon: 'mdi-play-box-multiple', title: 'Library', to: '/#2' },
+        { icon: 'mdi-history', title: 'History', to: '/#3' },
+        <divider></divider>,
         { text: 'Sign in to like videos,' },
         { text: 'comment, and subscribe.' },
-        { icon2: 'mdi-account', title2: 'SIGN IN', to: '/#####' },
-        ],
-        items3: [
-        { text3: 'BEST OF YOUTUBE', to: '/######' },
-        { icon3: 'mdi-music', title3: 'Music', to: '/########' },
-        { icon3: 'mdi-trophy-variant', title3: 'Sports', to: '/#########' },
-        { icon3: 'mdi-youtube-gaming', title3: 'Gaming', to: '/##########' },
-        { icon3: 'mdi-newspaper-variant-outline', title3: 'News', to: '/###########' },
-        { icon3: 'mdi-access-point', title3: 'Live', to: '/############' },
-        { icon3: 'mdi-panorama-sphere-outline', title3: '360 Video', to: '/#############' },
-        ],
-        items4: [
-        { icon: 'mdi-plus-circle-outline', title4: 'Browse channels', to: '/##############' },
-        ],
+        { icon: 'mdi-account', title: 'SIGN IN', to: '/#4' },
+        <divider></divider>,
+        { text: 'BEST OF YOUTUBE', to: '/#5' },
+        { icon: 'mdi-music', title: 'Music', to: '/#6' },
+        { icon: 'mdi-trophy-variant', title: 'Sports', to: '/#7' },
+        { icon: 'mdi-youtube-gaming', title: 'Gaming', to: '/#8' },
+        { icon: 'mdi-newspaper-variant-outline', title: 'News', to: '/#9' },
+        { icon: 'mdi-access-point', title: 'Live', to: '/#11' },
+        { icon: 'mdi-panorama-sphere-outline', title: '360 Video', to: '/#12' },
+        <divider></divider>,
+        { icon: 'mdi-plus-circle-outline', title: 'Browse channels', to: '/#13' },
+      ],
       miniVariant: true,
       right: true,
       rightDrawer: false,
