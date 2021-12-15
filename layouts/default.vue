@@ -17,11 +17,11 @@
           exact
         >
           <v-list-item-action>
-            <v-list-item-title v-text="item.text" />
+            <v-list-item-title class="text-subtitle-2" v-text="item.text" />
             <v-icon>{{ item.icon }}</v-icon>
           </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title class="text-subtitle-2" v-text="item.title" />
           </v-list-item-content>
         </v-list-item>
 </v-list>
@@ -44,7 +44,9 @@
             dense
             solo
             label="Search"
-            outlined>
+            outlined
+            class="d-flex align-center mt-6"
+            >
             </v-text-field>
         <v-btn
               icon
@@ -79,6 +81,7 @@
       </v-btn>
     </v-app-bar>
     <v-main>
+      
       <v-container
         height: 50px
         color: grey darken-4
@@ -88,39 +91,132 @@
         align="center"
         justify-content="center"
         >
-        <v-chip :input-value="active" filter>All</v-chip>
-        <v-chip :input-value="active" filter>Deep House</v-chip>
-        <v-chip :input-value="active" filter>Chill-out music</v-chip>
-        <v-chip :input-value="active" filter>Blues rock music</v-chip>
-        <v-chip :input-value="active" filter>Background music</v-chip>
-        <v-chip :input-value="active" filter>Coldplay</v-chip>
-        <v-chip :input-value="active" filter>Music</v-chip>
-        <v-chip :input-value="active" filter>Greatest hits albums</v-chip>
-        <v-chip :input-value="active" filter>Live</v-chip>
-        <v-chip :input-value="active" filter>Scorpios</v-chip>
-        <v-chip :input-value="active" filter>Radios</v-chip>
-        <v-chip :input-value="active" filter>Reggae</v-chip>
-        <v-chip :input-value="active" filter>Classic</v-chip>
+        <v-chip-group>
+        <v-chip  class="ma-2" @click="active" filter>All</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Deep House</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Chill-out music</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Blues rock music</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Background music</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Coldplay</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Music</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Greatest hits albums</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Live</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Scorpios</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Radios</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Reggae</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Classic</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>All</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Deep House</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Chill-out music</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Blues rock music</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Background music</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Coldplay</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Music</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Greatest hits albums</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Live</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Scorpios</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Radios</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Reggae</v-chip>
+        <v-chip  class="ma-2" @click="active" filter>Classic</v-chip>
+        </v-chip-group>
         </v-row>
       </v-container>
-    </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
+    
+<v-row no-gutters>
+      <v-col
+        v-for="n in 3"
+        :key="n"
+        cols="12"
+        sm="4"
+      >
+<v-card
+    class="mx-auto ma-5"
+    max-width="300"
+    
+  >
+    <v-img
+      src="https://loremflickr.com/300/180"
+    ></v-img>
+
+    <v-card-title>
+      Me at the zoo
+    </v-card-title>
+
+    <v-card-subtitle>
+      jawed
+       </v-card-subtitle>
+       <v-card-subtitle>
+      230M views | 16 years ago
+      </v-card-subtitle>
+  </v-card>
+
+<v-card
+    class="mx-auto ma-5"
+    max-width="300"
+    
+  >
+    <v-img
+      src="https://picsum.photos/300/180?random"
+    ></v-img>
+
+    <v-card-title>
+      Johnny Knoxville Breaks Down every injury of his career
+    </v-card-title>
+
+    <v-card-subtitle>
+      Vanity Fair
+       </v-card-subtitle>
+       <v-card-subtitle>
+      33M views | 3 years ago
+      </v-card-subtitle>
+  </v-card>
+
+  <v-card
+    class="mx-auto ma-5"
+    max-width="300"
+    
+  >
+    <v-img
+      src="https://picsum.photos/300/180"
+    ></v-img>
+
+    <v-card-title>
+      Relaxing christmas jazz music 10 hours
+    </v-card-title>
+
+    <v-card-subtitle>
+      relax cafe music
+       </v-card-subtitle>
+       <v-card-subtitle>
+      5.7M views | 1 year ago
+      </v-card-subtitle>
+  </v-card>
+
+<v-card
+    class="mx-auto ma-5"
+    max-width="300"
+    
+  >
+    <v-img
+      src="	https://source.unsplash.com/user/c_v_r/300x180"
+    ></v-img>
+
+    <v-card-title>
+      Keanu Reeves and Carrie-Anne
+    </v-card-title>
+
+    <v-card-subtitle>
+      The Verge
+       </v-card-subtitle>
+       <v-card-subtitle>
+      1.4M views | 5 days ago
+      </v-card-subtitle>
+  </v-card>
+
+  </v-col>
+  </v-row>
+
+</v-main>
   </v-app>
 </template>
 
@@ -147,10 +243,10 @@ export default {
         { icon: 'mdi-trophy-variant', title: 'Sports', to: '/#7' },
         { icon: 'mdi-youtube-gaming', title: 'Gaming', to: '/#8' },
         { icon: 'mdi-newspaper-variant-outline', title: 'News', to: '/#9' },
-        { icon: 'mdi-access-point', title: 'Live', to: '/#11' },
-        { icon: 'mdi-panorama-sphere-outline', title: '360 Video', to: '/#12' },
+        { icon: 'mdi-access-point', title: 'Live', to: '/#10' },
+        { icon: 'mdi-panorama-sphere-outline', title: '360 Video', to: '/#11' },
         <divider></divider>,
-        { icon: 'mdi-plus-circle-outline', title: 'Browse channels', to: '/#13' },
+        { icon: 'mdi-plus-circle-outline', title: 'Browse channels', to: '/#12' },
       ],
       miniVariant: true,
       right: true,
